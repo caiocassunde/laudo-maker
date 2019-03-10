@@ -53,7 +53,7 @@ function post(cliente) {
             alert("Cliente Cadastrado com Sucesso!")
         },
         error: function () {
-            console.log("Erro ao Cadastrar o Cliente!")
+            alert("Erro ao Cadastrar o Cliente!")
         }
     });
 };

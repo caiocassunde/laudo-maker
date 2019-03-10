@@ -20,7 +20,7 @@ function getByDocument() {
         },
         error: function () {
             $("#tabela").addClass("invisible");
-            console.log("erro")
+            alert("Erro ao Consultar Cliente!")
         }
     });
 };
