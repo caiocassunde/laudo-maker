@@ -47,7 +47,7 @@ botaoEnviar.on("click", function (event) {
 function post(cliente) {
     $.ajax({
         type: "POST",
-        url: "http://localhost:4567/registrer",
+        url: "http://ec2-18-217-235-234.us-east-2.compute.amazonaws.com:8080/registrer",
         data: JSON.stringify(cliente),
         success: function (ret) {
             alert("Cliente Cadastrado com Sucesso!")
@@ -63,7 +63,7 @@ function getByDocument() {
     var doc = form.find("#cnpj").val();
     $.ajax({
         type: "GET",
-        url: "http://localhost:4567/registrer/" + doc,
+        url: "http://ec2-18-217-235-234.us-east-2.compute.amazonaws.com:8080/registrer/" + doc,
         success: function (ret) {
             console.log(ret);
         },
@@ -78,7 +78,7 @@ function getByDocument() {
 function getAll() {
     $.ajax({
         type: "GET",
-        url: "http://localhost:4567/registrer",
+        url: "http://ec2-18-217-235-234.us-east-2.compute.amazonaws.com:8080/registrer",
         success: function (ret) {
             console.log(ret)
         },

@@ -13,7 +13,7 @@ botaoEnviar.click(function (event) {
 function getByDocument() {
     $.ajax({
         type: "GET",
-        url: "http://localhost:4567/registrer?document=" + cnpjMascara.val().replace(/[^\d]+/g, ''),
+        url: "http://ec2-18-217-235-234.us-east-2.compute.amazonaws.com:8080/registrer?document=" + cnpjMascara.val().replace(/[^\d]+/g, ''),
         success: function (ret) {
             $("#tabela").removeClass("invisible");
             montaCliente(ret);
